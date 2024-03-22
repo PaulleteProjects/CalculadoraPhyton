@@ -78,6 +78,15 @@
         document.getElementById('Expressão_matemática').value = '';
     }
 
-
+    function Calcular() {
+        var Sinal = document.getElementById('Expressão_matemática').value;
+        var Expressão_matemática;
+        try {
+            Expressão_matemática = eval(Sinal);
+            document.getElementById('Expressão_matemática').value = Expressão_matemática;
+        } catch (error) {
+            alert('Erro ao calcular a expressão.');
+        }
+    }
 </script>
 </html>
